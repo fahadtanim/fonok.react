@@ -1,0 +1,37 @@
+#main-nav{
+    font-family: 'Poiret One',cursive;
+    background-color: #010101;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.brand-logo{
+    letter-spacing: 5px;
+    font-size: 1.25em;
+}
+
+#mobile-demo{
+    background-color: #010101;
+    color: #f5f5f5;
+}
+
+
+#mobile-demo li a{
+    color: #f5f5f5;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.nav-items li a {
+    font-size: 1.2em;
+    color: #f5f5f5;
+    transition: color 0.3s;
+    margin-left: 30px;
+    margin-right: 30px;
+    letter-spacing: 3px;
+}
+
+.nav-items li:hover a{
+    color: #ff5252;
+    background-color: #f5f5f506;
+}
