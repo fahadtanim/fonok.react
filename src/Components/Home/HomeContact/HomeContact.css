@@ -1,3 +1,8 @@
+.home-contact-container-wrapper{
+  min-height: 100vh;
+  margin-top: -100vh;
+}
+
 .home-contact-wrapper{
     background-color: #020202;
   }
@@ -45,28 +50,33 @@
     letter-spacing: 2px;
   }
 
+  .contact-form-header{
+    color: #f5f5f5;
+    font-size: 36px;
+  }
+
   /* label color */
   .input-field label {
     color: #7d7769;
   }
   /* label focus color */
-  .input-field input:focus + label {
+  .input-field input:focus + label, .input-field textarea:focus + label {
     color: #ff5252!important;
     background: none;
   }
   /* label underline focus color */
-  .input-field input[type=text]:focus {
+  .input-field input:focus {
     border-bottom: 1px solid #7d7769;
     box-shadow: 0 1px 0 0 #7d7769;
   }
   /* valid color */
-  .input-field input[type=email].valid {
+  .input-field input.valid {
     border-bottom: 1px solid #004d40;
     box-shadow: 0 1px 0 0 #000;
     
   }
   /* invalid color */
-  .input-field input[type=email].invalid {
+  .input-field input.invalid {
     border-bottom: 1px solid #d50000;
     box-shadow: 0 1px 0 0 #000;
   }
@@ -78,13 +88,14 @@
 
   .prefix{
     color: #7d7769;
+    margin-top: 7px;
   }
   .input-field label.active{
     background: none;
     color: #ff5252;
   }
 
-  .input-field input{
+  .input-field input, .input-field textarea{
     caret-color: #7d7769;
     color: #7d7769;
   }
@@ -93,7 +104,7 @@
       color: #7d7769;
   }
 
-  .input-field input:active,  .input-field input:focus{
+  .input-field input:active,  .input-field input:focus, .input-field textarea:active,  .input-field textarea:focus{
     border-bottom: 1px solid #ff5252 !important;
     box-shadow: 0 1px 0 0 #ff5252 !important;
   }

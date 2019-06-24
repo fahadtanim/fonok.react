@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./NavigationBar.css";
 import M from "materialize-css";
-
+import {Link} from "react-router-dom";
 class NavigationBar extends Component {
   state = {};
   componentDidMount() {
@@ -22,19 +22,19 @@ class NavigationBar extends Component {
               </a>
               <ul className="right hide-on-med-and-down nav-items">
                 <li>
-                  <a href="sass.html">Home</a>
+                  <Link to="/home">Home</Link>
                 </li>
                 <li>
-                  <a href="badges.html">Photobox</a>
+                  <Link to="/photobox">Photobox</Link>
                 </li>
                 <li>
-                  <a href="collapsible.html">Service</a>
+                  <Link to="/service">Service</Link>
                 </li>
                 <li>
-                  <a href="mobile.html">About Us</a>
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li>
-                  <a href="mobile.html">Contact Us</a>
+                  <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -49,30 +49,29 @@ class NavigationBar extends Component {
           }}
         >
           <li>
-            <a className="waves-effect waves-light btn-flat">Button</a>
+            <Link className="" to="/home">
+              Home
+            </Link>
           </li>
           <li>
-            <a className="waves-effect waves-light btn-flat" href="badges.html">
+            <Link className="" to="/photobox">
               Photobox
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              className="waves-effect waves-light btn-flat"
-              href="collapsible.html"
-            >
+            <Link className="" to="/service">
               Service
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="waves-effect waves-light btn-flat" href="mobile.html">
+            <Link className="" to="/about">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="waves-effect waves-light btn-flat" href="mobile.html">
+            <Link className="" to="/contact">
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </React.Fragment>

@@ -133,7 +133,7 @@ class HomeContact extends Component {
     return (
       <React.Fragment>
         <Particles width="100%" height="100vh" params={this.state.particles} />
-        <div className="row">
+        <div className="row home-contact-container-wrapper valign-wrapper">
           <div className="container">
             <div className="row">
               <div className="col l6 m6 s12 content-center home-contact-info-wrapper">
@@ -178,11 +178,18 @@ class HomeContact extends Component {
               </div>
               <div className="col l6 m6 s12">
                 <div className="row">
+                  <h1 className="contact-form-header">Drop Us A Line</h1>
+                </div>
+                <div className="row">
                   <form className="col s12">
                     <div className="row">
                       <div className="input-field col s12 m6 l6">
                         <i className="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" type="text" className="validate" />
+                        <input
+                          id="icon_prefix"
+                          type="text"
+                          className="validate"
+                        />
                         <label htmlFor="icon_prefix">First Name</label>
                       </div>
                       <div className="input-field col s12 m6 l6">
@@ -193,9 +200,12 @@ class HomeContact extends Component {
                           className="helper-text"
                           data-error="wrong"
                           data-success="right"
-                        >
-                         
-                        </span>
+                        />
+                      </div>
+                      <div className="input-field col s12">
+                      <i className="material-icons prefix">textsms</i>
+                        <textarea id="textarea1" className="materialize-textarea" />
+                        <label htmlFor="textarea1">Message</label>
                       </div>
                     </div>
                   </form>

@@ -3,13 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 import NavigationBar from './Components/NavigationBar/NavigationBar';
 import Home from './Components/Home/Home';
+import Footer from './Components/Footer/Footer';
+
+import {BrowserRouter,Route} from 'react-router-dom';
+import Service from './Components/Service/Service';
 
 function App() {
   return (
-    <React.Fragment>
+    <BrowserRouter>
       <NavigationBar />
-      <Home/>
-    </React.Fragment>
+      <Route path="/home" component={Home} />
+      <Route path="/service" component={Service} />
+      <Footer></Footer>
+    </BrowserRouter>
     
   );
 }
