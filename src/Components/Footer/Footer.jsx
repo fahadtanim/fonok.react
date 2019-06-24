@@ -95,36 +95,36 @@ class Footer extends Component {
           </div>
           <div className="col s12">
             <div className="carousel">
-              <a className="carousel-item">
+              <div className="carousel-item">
                 <img
                   src="./assets/images/footerCarousel/DSC_4749.jpg"
                   className="materialboxed"
                 />
-              </a>
-              <a className="carousel-item">
+              </div>
+              <div className="carousel-item">
                 <img
                   src="./assets/images/footerCarousel/Havit-headphone.jpg"
                   className="materialboxed"
                 />
-              </a>
-              <a className="carousel-item">
+              </div>
+              <div className="carousel-item">
                 <img
                   src="./assets/images/footerCarousel/perfume-in-water.jpg"
                   className="materialboxed"
                 />
-              </a>
-              <a className="carousel-item">
+              </div>
+              <div className="carousel-item">
                 <img
                   src="./assets/images/footerCarousel/DSC_3099-1.jpg"
                   className="materialboxed"
                 />
-              </a>
-              <a className="carousel-item">
+              </div>
+              <div className="carousel-item">
                 <img
                   src="./assets/images/footerCarousel/DSC_4364.jpg"
                   className="materialboxed"
                 />
-              </a>
+              </div>
             </div>
           </div>
           <div className="col s12">

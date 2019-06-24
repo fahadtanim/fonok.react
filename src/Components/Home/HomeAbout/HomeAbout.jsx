@@ -9,7 +9,7 @@ class HomeAbout extends Component {
         <div className="row" style={{backgroundImage : "url('./assets/images/bg-about-me.jpg')", backgroundSize:"cover", backgroundPosition: "center center"}}>
           <div className="container">
             <div className="row home-about-parts-container valign-wrapper">
-              <div className="col l12 content-center">
+              <div className="col s12 m12 l12 content-center">
                 <div className="row">
                   <p className="home-about-greetings primary-red-color">
                     Nice to meet you
@@ -104,6 +104,7 @@ class HomeAbout extends Component {
                     </div>
                   </div>
                 </div>
+                
                 <div className="row home-about-signature">
                   <div className="col s1 content-center">
                     <div className="row">

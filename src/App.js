@@ -7,6 +7,8 @@ import Footer from './Components/Footer/Footer';
 
 import {BrowserRouter,Route} from 'react-router-dom';
 import Service from './Components/Service/Service';
+import Contact from './Components/Contact/Contact';
+import About from './Components/About/About';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <NavigationBar />
       <Route path="/home" component={Home} />
       <Route path="/service" component={Service} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/about" component={About} />
       <Footer></Footer>
     </BrowserRouter>
     

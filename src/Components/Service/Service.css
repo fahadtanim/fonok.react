@@ -39,6 +39,7 @@
   
   .photobox-gallery-img{
     padding-bottom:80%;
+    position: relative;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,6 +63,8 @@
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top:0px;
+    margin-bottom: 10px;
   }
   
   .service-feature-header {
@@ -78,6 +81,7 @@
     height: 1px;
     width: 40px;
     margin-left: 3px;
+    margin-bottom: 0px;
   }
   
   .photobox-boyan {
@@ -85,6 +89,8 @@
     color: #878787;
     font-weight: 300;
     line-height: 30px;
+    margin-top: 0px;
+    margin-bottom: 2em;
   }
   .photobox-img-basic-gallery{
     padding-top:60px;

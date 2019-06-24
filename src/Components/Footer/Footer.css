@@ -152,6 +152,7 @@
     transition: 0.3s;
     letter-spacing: 1px;
     font-weight: 600;
+    cursor: pointer;
   }
   
   .footer-menu-item:hover{
@@ -240,7 +241,7 @@
   }
 
   #materialbox-overlay{
-      width: 98vw !important;
+      /* width: 98vw !important; */
       background-color: #010101bb;
   }
 

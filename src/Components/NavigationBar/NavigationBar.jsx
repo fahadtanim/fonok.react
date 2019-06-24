@@ -11,12 +11,12 @@ class NavigationBar extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="navbar-fixed z-depth-1">
+        <div className="navbar-fixed z-depth-4">
           <nav id="main-nav">
             <div className="nav-wrapper">
-              <a className="btn waves-effect" href="#!" className="brand-logo">
-                Fonok
-              </a>
+              <Link className="btn waves-effect" to="/home" className="brand-logo">
+                Fonok's
+              </Link>
               <a href="#" data-target="mobile-demo" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
               </a>
