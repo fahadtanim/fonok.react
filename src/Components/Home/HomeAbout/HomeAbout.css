@@ -14,6 +14,7 @@
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
+    margin : 0px;
   }
   
   .home-about-name{
@@ -26,7 +27,8 @@
     line-height: 100%;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 0px;
+    margin-bottom: 0.75rem;
+    margin-top:0.75rem;
   }
   
   
@@ -37,6 +39,8 @@
     letter-spacing: 3px;
     line-height: 100%;
     color: #F5F5F5;
+    margin-top:0.75rem;
+    margin-bottom: 0.75rem;
   }
   
   .home-about-details{
@@ -51,6 +55,7 @@
     font-weight: 700;
     /* font-family: 'Oswald',sans-serif; */
     letter-spacing: 2px;
+    margin: 0px;
   }
   
   

@@ -9,12 +9,14 @@ import {BrowserRouter,Route} from 'react-router-dom';
 import Service from './Components/Service/Service';
 import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
+import Photobox from './Components/Photobox/Photobox';
 
 function App() {
   return (
     <BrowserRouter>
       <NavigationBar />
       <Route path="/home" component={Home} />
+      <Route path="/Photobox" component={Photobox} />
       <Route path="/service" component={Service} />
       <Route path="/contact" component={Contact} />
       <Route path="/about" component={About} />

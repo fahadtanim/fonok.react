@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./NavigationBar.css";
 import M from "materialize-css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 class NavigationBar extends Component {
   state = {};
   componentDidMount() {
@@ -14,7 +14,11 @@ class NavigationBar extends Component {
         <div className="navbar-fixed z-depth-4">
           <nav id="main-nav">
             <div className="nav-wrapper">
-              <Link className="btn waves-effect" to="/home" className="brand-logo">
+              <Link
+                className="btn waves-effect"
+                to="/home"
+                className="brand-logo"
+              >
                 Fonok's
               </Link>
               <a href="#" data-target="mobile-demo" className="sidenav-trigger">
@@ -25,7 +29,31 @@ class NavigationBar extends Component {
                   <Link to="/home">Home</Link>
                 </li>
                 <li>
-                  <Link to="/photobox">Photobox</Link>
+                  <Link to="/photobox">
+                    Photobox
+                  </Link>
+                  {/* <ul className="z-depth-4 sub-menu">
+                    <li>
+                      <Link to="/photobox/fashion/view">Fashion Photobox</Link>
+                    </li>
+                    <li>
+                      <Link to="/photobox/event/view">Event Photobox</Link>
+                    </li>
+                    <li>
+                      <Link to="/photobox/product/view">
+                        Product Photobox
+                        <i className="material-icons sub-submenu-icon">
+                          chevron_right
+                        </i>
+                      </Link>
+
+                      <ul className = "sub-sub-menu">
+                        <li>
+                          <Link to = "#">Test</Link>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul> */}
                 </li>
                 <li>
                   <Link to="/service">Service</Link>

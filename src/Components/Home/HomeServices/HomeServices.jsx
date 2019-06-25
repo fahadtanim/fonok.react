@@ -11,7 +11,7 @@ class HomeServices extends Component {
             <div className="row">
               <p className="about-us-sub-header">WHAT WE Offer</p>
             </div>
-            <div className="row upore-uth">
+            <div className="row">
               <h1 className="about-us-feature-header">Our SERVICES</h1>
             </div>
             <div className="row">

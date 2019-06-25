@@ -1,0 +1,14 @@
+.fixed-btn{
+    position: fixed;
+    z-index: 998;
+    top: 64px;
+    left :64px;
+}
+
+ul > li > a{
+    transition: color 0.3s;
+}
+
+ul > li:hover > a{
+    color: #ff5252;
+}

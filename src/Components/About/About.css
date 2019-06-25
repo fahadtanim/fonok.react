@@ -155,13 +155,15 @@
   
   .about-photobox-grid{
     padding-top: 33.333333%;
-    padding-right: 30px;
+
+    padding-left: 0rem !important;
+    padding-right: 0.75rem;
   }
   
   .about-photobox-img-container{
     position: relative;
     padding-top: 100%;
-    margin-top: -100%;
+    margin-top: 15px;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -193,7 +195,7 @@
     color: #fff;
     padding-left: 15px;
     margin-top: -100%;
-    padding-top: 80%;
+    padding-top: 72.5%;
     width: 0px;
     overflow: hidden;
     transition: 0.7s;
@@ -208,7 +210,7 @@
   .about-photobox-img-container h6::before{
     content: '';
     position: absolute;
-    bottom:-40%;
+    top:21px;
     left:0px;
     background-color: #f75e50;
     width:30%;
@@ -222,3 +224,6 @@
     padding-right:15px;
   }*/
   
+  .photobox-cat-item{
+    margin-top : 2em;
+  }
