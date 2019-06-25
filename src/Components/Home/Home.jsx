@@ -7,6 +7,20 @@ import HomeTestimonial from './HomeTestimonial/HomeTestimonial';
 import HomeContact from './HomeContact/HomeContact';
 class Home extends Component {
     state = {  }
+    componentDidMount(){
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }
+    componentWillMount(){
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }
     render() { 
         return ( 
             <React.Fragment>

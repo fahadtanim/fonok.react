@@ -126,6 +126,21 @@ class Contact extends Component {
 
     console.log(this.state);
   }
+
+  componentDidMount(){
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+  componentWillUnmount(){
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
   render() {
     return (
       <React.Fragment>

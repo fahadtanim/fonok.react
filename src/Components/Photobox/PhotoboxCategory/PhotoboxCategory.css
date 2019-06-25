@@ -62,5 +62,82 @@
 
   #get-down-row{
     height: 1em;
-    margin-top: 6.25em;
+    margin-top: 3.25em;
+}
+
+
+.mosaic-container{
+  width: 100%;
+  float: left;
+}
+
+.mosaic-pic-box{
+  overflow: hidden;
+  margin: 0px;
+  position: relative;
+  float: left;
+}
+
+.mosaic-pic-box .photo-container{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position-x: center;
+  background-position-y: center;
+  cursor: pointer;
+  transition: height,width, margin, 0.3s;
+}
+
+.mosaic-pic-box .photo-container:hover.photo-container{
+  /* // filter: blur(2px) grayscale(100%); */
+  height: 105%;
+  width: 105%;
+  margin-left: -2%;
+  margin-top: -2%;
+}
+  
+.mosaic-square{
+  width: 33.33%;
+  height: 33.33vw;
+  position: relative;
+  
+}
+.mosaic-tall{
+  width: 33.33%;
+  height: 66.66vw;
+  position: relative;
+  
+}
+
+.mosaic-wide{
+  width: 66.66%;
+  height: 33.33vw;
+  margin-top:-33.33vw;
+  position: relative;
+  
+}
+
+.mosaic-fat{
+  width: 50%;
+  height: 80vw;
+  position: relative;
+  
+}
+
+.mosaic-medium{
+  width: 50%;
+  height: 40vw;
+  position: relative;
+  
+}
+
+.mosaic-medium-2{
+  width: 50%;
+  height: 40vw;
+  position: relative;
+  margin-top: -40vw;
+  margin-left: 50%;
+  
 }

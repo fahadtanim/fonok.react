@@ -1,8 +1,14 @@
+
 import React, { Component } from "react";
 import "./PhotoboxCategory.css";
 import SliderService from "../../../Services/SliderService";
 class PhotoboxCategory extends Component {
   state = {};
+  constructor(props){
+    super();
+    console.log(props);
+    this.state.images = props.images;
+  }
   componentDidMount() {
     let slider = new SliderService(
       "home-slider",
@@ -16,6 +22,7 @@ class PhotoboxCategory extends Component {
       console.log("state Slider ", this.state);
       this.state.HomeSlider.animate();
     });
+    
   }
 
   componentWillUnmount() {
@@ -25,6 +32,25 @@ class PhotoboxCategory extends Component {
   handleHomeSlider = param => {
     this.state.HomeSlider.currentSlide(param);
   };
+
+  handlePrintBox = () =>{
+    return(
+      this.state.images.map(
+        (img) =>
+        <div key= {img.image_id} className= {"mosaic-"+ img.size +" mosaic-pic-box"}>
+            <div
+              className="photo-container"
+              style={{
+                backgroundImage: "url('./assets/images/portfolio/"+img.category+"/"+img.subcategory+"/JPEG/"+ img.image +"')"
+              }}
+            />
+          </div>
+        
+      )
+    );
+  }
+
+ 
   render() {
     return (
       <React.Fragment>
@@ -72,7 +98,71 @@ class PhotoboxCategory extends Component {
             </div>
           </div>
         </div>
-        <div className="row" id = "get-down-row"></div>
+        <div className="row" id="get-down-row" />
+        <div className="row">
+          <div className="mosaic-container">
+            {
+              this.handlePrintBox()
+            }
+            {/* <div className="mosaic-square mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-square mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-tall mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-wide mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-fat mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-medium mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-medium mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+           */}
+          </div>
+        </div>
       </React.Fragment>
     );
   }

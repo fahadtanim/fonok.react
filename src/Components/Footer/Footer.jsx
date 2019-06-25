@@ -4,7 +4,7 @@ import M from "materialize-css";
 class Footer extends Component {
   state = {};
   componentDidMount() {
-    console.log(M);
+    // console.log(M);
     document.addEventListener("DOMContentLoaded", function() {
       var elems = document.querySelectorAll(".carousel");
       var instances = M.Carousel.init(elems, { duration: 200 });
@@ -19,7 +19,9 @@ class Footer extends Component {
           className="row footer-wrapper"
           style={{ backgroundImage: "url('./assets/images/footer-bg.jpg')" }}
         >
-          {/* <!--First Boyans--> */}
+          <div className = "footer-wrapper-effect">
+            <div className="row">
+              {/* <!--First Boyans--> */}
           <div className="col s12 content-center">
             <div className="row justify-center">
               <h1 className="footer-header-time primary-white-color">Now</h1>
@@ -89,7 +91,7 @@ class Footer extends Component {
                 <a className="footer-menu-item">Services</a>
                 <a className="footer-menu-item">Pricing Plan</a>
                 <a className="footer-menu-item">About Us</a>
-                <a className="footer-menu-item">Contact</a>
+                <a className="footer-menu-item">Contact Us</a>
               </div>
             </div>
           </div>
@@ -139,6 +141,9 @@ class Footer extends Component {
                   terms of policies
                 </a>
               </div>
+            </div>
+          </div>
+          <div className="footer-wrapper-effect"></div>
             </div>
           </div>
         </div>

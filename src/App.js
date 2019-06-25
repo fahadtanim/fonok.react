@@ -15,11 +15,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavigationBar />
-      <Route path="/home" component={Home} />
-      <Route path="/Photobox" component={Photobox} />
-      <Route path="/service" component={Service} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/about" component={About} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/home" component={Home} />
+      <Route exact path="/photobox" component={Photobox} />
+      <Route exact path="/photobox/:category/:subcategory" component={Photobox}/>
+      <Route exact path="/service" component={Service} />
+      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/about" component={About} />
       <Footer></Footer>
     </BrowserRouter>
     
