@@ -1,0 +1,110 @@
+.home-contact-container-wrapper{
+  min-height: 100vh;
+  margin-top: -100vh;
+}
+
+.home-contact-wrapper{
+    background-color: #020202;
+  }
+  
+  .home-contact-container{
+    height: 100%;
+  }
+  
+  .home-contact-info-wrapper{
+    margin-bottom: 95px;
+  }
+  
+  .home-contact-location{
+    font-size: 36px;
+    color: #F5F5F5;
+    letter-spacing: 1.5px;
+  }
+  
+  
+  .home-contact-address{
+    font-weight: 700;
+    color: #878787;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .home-contact-address-details{
+    color: #7d7769;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  
+  .home-contact-info-title{
+    color: #f5f5f5;
+    font-size: 20px;
+  }
+  
+  .home-contact-info-details{
+    color: #878787;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 10px;
+    letter-spacing: 2px;
+  }
+
+  .contact-form-header{
+    color: #f5f5f5;
+    font-size: 36px;
+  }
+
+  /* label color */
+  .input-field label {
+    color: #7d7769;
+  }
+  /* label focus color */
+  .input-field input:focus + label, .input-field textarea:focus + label {
+    color: #ff5252!important;
+    background: none;
+  }
+  /* label underline focus color */
+  .input-field input:focus {
+    border-bottom: 1px solid #7d7769;
+    box-shadow: 0 1px 0 0 #7d7769;
+  }
+  /* valid color */
+  .input-field input.valid {
+    border-bottom: 1px solid #004d40;
+    box-shadow: 0 1px 0 0 #000;
+    
+  }
+  /* invalid color */
+  .input-field input.invalid {
+    border-bottom: 1px solid #d50000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #ff5252;
+    background:none;
+  }
+
+  .prefix{
+    color: #7d7769;
+    margin-top: 7px;
+  }
+  .input-field label.active{
+    background: none;
+    color: #ff5252;
+  }
+
+  .input-field input, .input-field textarea{
+    caret-color: #7d7769;
+    color: #7d7769;
+  }
+
+  .input-field label{
+      color: #7d7769;
+  }
+
+  .input-field input:active,  .input-field input:focus, .input-field textarea:active,  .input-field textarea:focus{
+    border-bottom: 1px solid #ff5252 !important;
+    box-shadow: 0 1px 0 0 #ff5252 !important;
+  }

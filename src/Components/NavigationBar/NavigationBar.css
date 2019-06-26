@@ -1,0 +1,132 @@
+#main-nav{
+    font-family: 'Poiret One',cursive;
+    background-color: #010101;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.brand-logo{
+    letter-spacing: 5px;
+    font-size: 1.25em;
+}
+
+#mobile-demo{
+    /* background-color: #010101;
+    color: #f5f5f5; */
+}
+
+
+#mobile-demo > li > a{
+    /* color: #f5f5f5; */
+    margin-left: 0px;
+    margin-right: 0px;
+    transition: 0.3s;
+}
+#mobile-demo > li:hover a{
+    color: #ff5252;
+}
+
+.nav-items > li > a {
+    font-size: 1.2em;
+    /* color: #f5f5f5; */
+    transition: color 0.3s;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    letter-spacing: 3px;
+}
+
+.nav-items > li:hover > a{
+    color: #ff5252;
+    background-color: #f5f5f506;
+}
+
+
+
+
+/*smartphone*/
+@media screen and (min-width: 576px) and (max-width: 767){
+    nav .brand-logo{
+        font-size: 1.2em;
+    }
+  }
+
+  /*smallphone*/
+  @media (max-width: 575px){
+    nav .brand-logo{
+        font-size: 1.2em;
+    }
+  }
+
+
+  nav ul li ul{
+      visibility: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-top: 20%;
+      margin-left:10%;
+      opacity: 0.5;
+      transition: 0.3s;
+      background-color: #010101;
+  }
+
+  nav ul li ul li{
+      display: flex;
+  }
+  .sub-menu > li > a{
+    width:100%;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+
+  nav ul li:hover ul{
+      visibility: visible;
+      margin-top: 20%;
+      opacity: 1;
+  }
+
+
+  .sub-menu > li:hover > a{
+    color: #ff5252;
+    background-color: #f5f5f506;
+  }
+
+  .submenu-icon{
+    margin-left: 95%;
+    margin-top: -62%;
+}
+.sub-submenu-icon{
+    margin-left: 100%;
+    margin-top: -52%;
+}
+
+.sub-menu{
+    margin: 0px;
+}
+
+
+.sub-menu > ul{
+    visibility: hidden;
+}
+
+
+.sub-sub-menu{
+    /* visibility: hidden; */
+    display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-top: -10%;
+      margin-left:10%;
+      opacity: 0.5;
+      transition: 0.3s;
+      background-color: #010101;
+}
+
+.sub-sub-menu > li{
+    display: flex;
+}
+
+
+.sub-menu > ul > li:hover > ul{
+    visibility: visible;
+}

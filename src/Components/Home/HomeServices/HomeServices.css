@@ -1,0 +1,85 @@
+.about-us-sub-header {
+    font-family: 'Raleway',sans-serif;
+    color: #575757;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 2em 0 0 15px;
+  }
+
+  .upore-uth{
+      margin-top: -3em;
+  }
+  
+  .about-us-feature-header {
+    color: #e5e5e5;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 15px;
+  }
+  
+  .header-bottom-line {
+    background-color: #f75e50;
+    height: 1px;
+    width: 40px;
+    margin-left: 18px;
+    margin-bottom: 30px;
+  }
+
+  .home-service-box{
+    box-shadow: 0 0 1px #878787;
+    width: 100%;
+    padding-top: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px;
+    position: relative;
+    margin-top:2em;
+    margin-left: -0.75rem;
+  }
+  
+  .home-service-box::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #070707cc;
+  }
+  
+  .home-service-box-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20% 15px 15px;
+  }
+  
+  .home-service-logo-wrapper {
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .home-service-logo-wrapper img{
+    height: 40px;
+    width: 40px;
+  }
+  
+  .home-service-title-wrapper h6{
+    color: #e5e5e5;
+    font-size: 24px;
+    font-weight: 700;
+
+  }
+  
+  .home-service-details-wrapper p {
+    width: 80%;
+    text-align: center;
+    color: #878787;
+    font-size: 14px;
+    margin-top:0px;
+  }
+  
