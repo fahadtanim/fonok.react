@@ -7,7 +7,7 @@ class Footer extends Component {
     // console.log(M);
     document.addEventListener("DOMContentLoaded", function() {
       var elems = document.querySelectorAll(".carousel");
-      var instances = M.Carousel.init(elems, { duration: 200 });
+      var carousel = M.Carousel.init(elems, { duration: 50 });
       var elems = document.querySelectorAll(".materialboxed");
       var instances = M.Materialbox.init(elems, {});
     });
@@ -17,7 +17,7 @@ class Footer extends Component {
       <React.Fragment>
         <div
           className="row footer-wrapper"
-          style={{ backgroundImage: "url('./assets/images/footer-bg.jpg')" }}
+          style={{ backgroundImage: "url('/assets/images/footer-bg.jpg')" }}
         >
           <div className = "footer-wrapper-effect">
             <div className="row">
@@ -99,31 +99,31 @@ class Footer extends Component {
             <div className="carousel">
               <div className="carousel-item">
                 <img
-                  src="./assets/images/footerCarousel/DSC_4749.jpg"
+                  src="/assets/images/footerCarousel/DSC_4749.jpg"
                   className="materialboxed"
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src="./assets/images/footerCarousel/Havit-headphone.jpg"
+                  src="/assets/images/footerCarousel/Havit-headphone.jpg"
                   className="materialboxed"
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src="./assets/images/footerCarousel/perfume-in-water.jpg"
+                  src="/assets/images/footerCarousel/perfume-in-water.jpg"
                   className="materialboxed"
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src="./assets/images/footerCarousel/DSC_3099-1.jpg"
+                  src="/assets/images/footerCarousel/DSC_3099-1.jpg"
                   className="materialboxed"
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src="./assets/images/footerCarousel/DSC_4364.jpg"
+                  src="/assets/images/footerCarousel/DSC_4364.jpg"
                   className="materialboxed"
                 />
               </div>

@@ -1,12 +1,11 @@
-
 import React, { Component } from "react";
 import "./PhotoboxCategory.css";
 import SliderService from "../../../Services/SliderService";
 class PhotoboxCategory extends Component {
   state = {};
-  constructor(props){
+  constructor(props) {
     super();
-    console.log(props);
+    // console.log(props);
     this.state.images = props.images;
   }
   componentDidMount() {
@@ -18,70 +17,111 @@ class PhotoboxCategory extends Component {
       3
     );
     // let x  = 10;
+
     this.setState({ HomeSlider: slider }, () => {
-      console.log("state Slider ", this.state);
+      // console.log("state Category ", this.state);
       this.state.HomeSlider.animate();
     });
-    
   }
 
   componentWillUnmount() {
     this.state.HomeSlider.stopAnimate();
+    this.setState();
   }
 
   handleHomeSlider = param => {
     this.state.HomeSlider.currentSlide(param);
   };
 
-  handlePrintBox = () =>{
-    return(
-      this.state.images.map(
-        (img) =>
-        <div key= {img.image_id} className= {"mosaic-"+ img.size +" mosaic-pic-box"}>
+  handlePrintBox = props => {
+    console.log("inside render", props);
+    if (props.productImages) {
+      console.log("going to output");
+      if (props.productImages.length > 0) {
+        return props.productImages.map(img => (
+          <div
+            key={img.image_id}
+            className={"mosaic-" + img.size + " mosaic-pic-box"}
+          >
             <div
               className="photo-container"
               style={{
-                backgroundImage: "url('./assets/images/portfolio/"+img.category+"/"+img.subcategory+"/JPEG/"+ img.image +"')"
+                backgroundImage:
+                  "url('/assets/images/portfolio/" +
+                  img.category +
+                  "/" +
+                  img.subcategory +
+                  "/JPEG/" +
+                  img.image +
+                  "')"
               }}
             />
           </div>
-        
-      )
-    );
-  }
+        ));
+      }
+      else{
+        return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
+      }
+    } else {
+      return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
+    }
+  };
 
- 
+  handlePrintSlider = props => {
+    console.log("inside render", props);
+    if (props.sliderImages) {
+      console.log("going to output");
+      if (props.sliderImages.length > 0) {
+        return props.sliderImages.map(img => (
+          <div
+            key = {img.image_id}
+                  className="home-slider"
+                  style={{
+                    backgroundImage: "url('/assets/images/portfolio/"+img.category+"/"+img.subcategory+"/JPEG/"+img.image+"')"
+                  }}
+                >
+                </div>
+        ));
+      }
+      else{
+        // return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
+      }
+    } else {
+      // return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
+    }
+  };
+
+  handlePrintSliderDot = props => {
+    // console.log("inside render", props);
+    if (props.sliderImages) {
+      // console.log("going to output");
+      if (props.sliderImages.length > 0) {
+        let i = 0;
+        return props.sliderImages.map(img => (
+          <span
+          key = {img.image_id}
+                className="dot align-self-center"
+                onClick={() => this.handleHomeSlider(i++)}
+              />
+        ));
+      }
+      else{
+        // return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
+      }
+    } else {
+      // return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
+    }
+  };
+
   render() {
+    console.log("before render ", this.props);
     return (
       <React.Fragment>
         <div className="row">
           <div className="home-slider-container-wrapper container-fluid">
             <div className="home-slider-box">
               <div id="home-slider-container">
-                <div
-                  className="home-slider"
-                  style={{
-                    backgroundImage: "url('./assets/images/bg-about-me.jpg')"
-                  }}
-                >
-                  1
-                </div>
-                <div
-                  className="home-slider"
-                  style={{
-                    backgroundImage: "url('./assets/images/bg-about-me.jpg')"
-                  }}
-                >
-                  2
-                </div>
-                <div
-                  className="home-slider"
-                  style={{
-                    backgroundImage: "url('./assets/images/bg-about-me.jpg')"
-                  }}
-                >
-                  3
-                </div>
+                { this.handlePrintSlider(this.props)}
               </div>
             </div>
           </div>
@@ -89,21 +129,14 @@ class PhotoboxCategory extends Component {
         <div className="row dot-wrapper">
           <div className="container-fluid home-slider-bubble">
             <div className="row justify-content-center">
-              <span
-                className="dot active align-self-center"
-                onClick={() => this.handleHomeSlider(0)}
-              />
-              <span className="dot" onClick={() => this.handleHomeSlider(1)} />
-              <span className="dot" onClick={() => this.handleHomeSlider(2)} />
+              {this.handlePrintSliderDot(this.props)}
             </div>
           </div>
         </div>
         <div className="row" id="get-down-row" />
         <div className="row">
           <div className="mosaic-container">
-            {
-              this.handlePrintBox()
-            }
+            {this.handlePrintBox(this.props)}
             {/* <div className="mosaic-square mosaic-pic-box">
               <div
                 className="photo-container"

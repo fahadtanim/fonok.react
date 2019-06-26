@@ -1,4 +1,14 @@
 
+.not-available-gallery {
+  color: #f5f5f5;
+  text-align: center;
+  width: 100%;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-family: 'Raleway',sans-serif;
+}
+
 
 .home-slider-container-wrapper{
     overflow:hidden;
