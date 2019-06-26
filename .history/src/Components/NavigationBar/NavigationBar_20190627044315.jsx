@@ -59,7 +59,7 @@ class NavigationBar extends Component {
                   <Link to="/service">Service</Link>
                 </li>
                 <li>
-                  <Link to="/pricing">Pricing Plan</Link>
+                  <Link to="/service">Pricing Plan</Link>
                 </li>
                 <li>
                   <Link to="/about">About Us</Link>
@@ -92,11 +92,6 @@ class NavigationBar extends Component {
           <li>
             <Link className="" to="/service">
               Service
-            </Link>
-          </li>
-          <li>
-            <Link className="" to="/pricing">
-              Pricing Plan
             </Link>
           </li>
           <li>

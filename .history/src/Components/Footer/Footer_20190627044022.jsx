@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Footer.css";
 import M from "materialize-css";
-import { Link } from "react-router-dom";
 class Footer extends Component {
   state = {};
   componentDidMount() {
@@ -93,12 +92,12 @@ class Footer extends Component {
               <div className="col s12 content-center">
                 <div className="row justify-space-around footer-social-menu-wrapper">
                   <div className="justify-space-around footer-menu">
-                    <Link to = "/home" className="footer-menu-item">Home</Link>
-                    <Link to = "/photobox" className="footer-menu-item">Photobox</Link>
-                    <Link to = "/services" className="footer-menu-item">Services</Link>
-                    <Link to = "/pricing" className="footer-menu-item">Pricing Plan</Link>
-                    <Link to = "/about" className="footer-menu-item">About Us</Link>
-                    <Link to = "/contact" className="footer-menu-item">Contact Us</Link>
+                    <a className="footer-menu-item">Home</a>
+                    <a className="footer-menu-item">Photobox</a>
+                    <a className="footer-menu-item">Services</a>
+                    <a className="footer-menu-item">Pricing Plan</a>
+                    <a className="footer-menu-item">About Us</a>
+                    <a className="footer-menu-item">Contact Us</a>
                   </div>
                 </div>
               </div>

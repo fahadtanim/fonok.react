@@ -10,6 +10,21 @@ class Photobox extends Component {
     subcategory: "",
     images: []
   };
+  componentDidMount(){
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  componentWillUnmount(){
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
   constructor(props) {
     super();
     // this.state.props = props;
@@ -659,7 +674,7 @@ class Photobox extends Component {
       currentImages: currentImages
     });
   }
-  componentWillUnmount() {
+  componentWillMount() {
     window.scrollTo({
       top: 0,
       left: 0,

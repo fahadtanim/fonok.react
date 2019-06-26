@@ -37,11 +37,7 @@ class PhotoboxCategory extends Component {
   componentDidUpdate(){
     console.log("updated");
     this.handleReloadModelView();
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
+    
   }
 
   handleHomeSlider = param => {

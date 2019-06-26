@@ -10,6 +10,7 @@ import Service from './Components/Service/Service';
 import Contact from './Components/Contact/Contact';
 import About from './Components/About/About';
 import Photobox from './Components/Photobox/Photobox';
+import PricingPlan from './Components/PricingPlan/PricingPlan';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route exact path="/photobox" component={Photobox} />
       <Route exact path="/photobox/:category/:subcategory" component={Photobox}/>
       <Route exact path="/service" component={Service} />
+      <Route exact path="/pricing" component={PricingPlan} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/about" component={About} />
       <Footer></Footer>

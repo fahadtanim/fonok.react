@@ -129,29 +129,3 @@ cursor: pointer;
 .primary-white-color{
  color: #f5f5f5
 }
-
-/*SCROLLBAR*/
-
-body::-webkit-scrollbar-track, .modal::-webkit-scrollbar-track
-{
-    -webkit-box-shadow: inset 0 0 6px #010101bb;
-    border-radius: 10px;
-    background-color: #444444;
-}
-
-body::-webkit-scrollbar, .modal::-webkit-scrollbar
-{
-    width: 2px;
-    background-color: #F5F5F5;
-}
-
-body::-webkit-scrollbar-thumb, .modal::-webkit-scrollbar-thumb
-{
-    border-radius: 10px;
-    background-color: #D62929;
-    background-image: -webkit-linear-gradient(90deg,
-                                              transparent,
-                                              rgba(0, 0, 0, 0.4) 50%,
-                                              transparent,
-                                              transparent)
-}

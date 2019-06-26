@@ -84,13 +84,10 @@
 .mosaic-pic-box{
   overflow: hidden;
   margin: 0px;
-  padding: 0px;
   position: relative;
   float: left;
 }
-.mosaic-pic-box:hover{
-  background-color: #010101;
-}
+
 .mosaic-pic-box .photo-container{
   height: 100%;
   width: 100%;
@@ -153,41 +150,4 @@
   margin-top: -40vw;
   margin-left: 50%;
   
-}
-
-
-.img-modal{
-  background: #0101012f;
-  max-height: 80vh;
-  width: 60vw;
-}
-.img-modal >.modal-content{
-  background: none;
-  max-height: 80vh;
-  padding: 5px;
-}
-.img-modal > .modal-footer{
-  background: none;
-}
-
-.modal-close-btn{
-  position: absolute;
-  top: 0px;
-  left:0px;
-  background: #222;
-  color: #f5f5f5;
-}
-.modal-close-btn:hover{
-  color:#f5f5f5;
-  background: #f75e50;
-}
-.img-modal img{
-  max-height: 78vh;
-  max-width: 100%;
-
-}
-
-.modal-overlay{
-  opacity: 1 !important;
-  background: #010101bb;
 }

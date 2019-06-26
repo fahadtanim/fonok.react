@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./PhotoboxCategory.css";
 import SliderService from "../../../Services/SliderService";
-import M from "materialize-css";
 class PhotoboxCategory extends Component {
   state = {};
   constructor(props) {
@@ -10,10 +9,6 @@ class PhotoboxCategory extends Component {
     this.state.images = props.images;
   }
   componentDidMount() {
-    document.addEventListener("DOMContentLoaded", function() {
-      var elems = document.querySelectorAll(".modal");
-      var lightModal = M.Modal.init(elems, {});
-    });
     let slider = new SliderService(
       "home-slider",
       "home-slider-container",
@@ -34,31 +29,19 @@ class PhotoboxCategory extends Component {
     this.setState();
   }
 
-  componentDidUpdate(){
-    console.log("updated");
-    this.handleReloadModelView();
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
-  }
-
   handleHomeSlider = param => {
     this.state.HomeSlider.currentSlide(param);
   };
 
   handlePrintBox = props => {
-    // console.log("inside render", props);
+    console.log("inside render", props);
     if (props.productImages) {
-      // console.log("going to output");
+      console.log("going to output");
       if (props.productImages.length > 0) {
         return props.productImages.map(img => (
           <div
             key={img.image_id}
-            className={"mosaic-" + img.size + " mosaic-pic-box modal-trigger"}
-            data-target={"modal"+img.image_id}
-            // onClick = { () => { M.Modal.getInstance(document.getElementById("modal"+img.image_id)).open(); }}
+            className={"mosaic-" + img.size + " mosaic-pic-box"}
           >
             <div
               className="photo-container"
@@ -75,47 +58,14 @@ class PhotoboxCategory extends Component {
             />
           </div>
         ));
-      } else {
-        return (
-          <h1 className="not-available-gallery">
-            Sorry, No Images Available For This Moment
-          </h1>
-        );
+      }
+      else{
+        return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
       }
     } else {
-      return (
-        <h1 className="not-available-gallery">
-          Sorry, No Images Available For This Moment
-        </h1>
-      );
+      return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
     }
   };
-  
-  handleModalView = props => {
-    if (props.productImages) {
-      if (props.productImages.length > 0) {
-        return props.productImages.map(img => (
-          <div key = {img.image_id} id= {"modal"+img.image_id} className="modal img-modal">
-            <div className="modal-content" onClick = { () => { M.Modal.getInstance(document.getElementById("modal"+img.image_id)).close(); }} >
-              <img src={"/assets/images/portfolio/" +
-                img.category +
-                "/" +
-                img.subcategory +
-                "/JPEG/" +
-                img.image} />
-            </div>
-              <button className = "btn-floating btn-small waves-effect waves-light red modal-close-btn" onClick = { () => { M.Modal.getInstance(document.getElementById("modal"+img.image_id)).close(); }}><i className="material-icons">close</i></button>
-          </div>
-        ));
-      }
-    }
-  };
-
-  handleReloadModelView = () => {
-    var elems = document.querySelectorAll(".modal");
-      var lightModal = M.Modal.init(elems, {});
-      console.log("came", lightModal);
-  }
 
   handlePrintSlider = props => {
     console.log("inside render", props);
@@ -124,28 +74,22 @@ class PhotoboxCategory extends Component {
       if (props.sliderImages.length > 0) {
         return props.sliderImages.map(img => (
           <div
-            key={img.image_id}
-            className="home-slider"
-            style={{
-              backgroundImage:
-                "url('/assets/images/portfolio/" +
-                img.category +
-                "/" +
-                img.subcategory +
-                "/JPEG/" +
-                img.image +
-                "')"
-            }}
-          />
+            key = {img.image_id}
+                  className="home-slider"
+                  style={{
+                    backgroundImage: "url('/assets/images/portfolio/"+img.category+"/"+img.subcategory+"/JPEG/"+img.image+"')"
+                  }}
+                >
+                </div>
         ));
-      } else {
+      }
+      else{
         // return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
       }
     } else {
       // return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
     }
   };
-
 
   handlePrintSliderDot = props => {
     // console.log("inside render", props);
@@ -155,12 +99,13 @@ class PhotoboxCategory extends Component {
         let i = 0;
         return props.sliderImages.map(img => (
           <span
-            key={img.image_id}
-            className="dot align-self-center"
-            onClick={() => this.handleHomeSlider(i++)}
-          />
+          key = {img.image_id}
+                className="dot align-self-center"
+                onClick={() => this.handleHomeSlider(i++)}
+              />
         ));
-      } else {
+      }
+      else{
         // return <h1 className="not-available-gallery">Sorry, No Images Available For This Moment</h1>;
       }
     } else {
@@ -168,19 +113,15 @@ class PhotoboxCategory extends Component {
     }
   };
 
-
-
   render() {
     console.log("before render ", this.props);
     return (
       <React.Fragment>
-        {this.handleModalView(this.props)}
-        {this.handleReloadModelView()}
         <div className="row">
           <div className="home-slider-container-wrapper container-fluid">
             <div className="home-slider-box">
               <div id="home-slider-container">
-                {this.handlePrintSlider(this.props)}
+                { this.handlePrintSlider(this.props)}
               </div>
             </div>
           </div>
@@ -196,9 +137,65 @@ class PhotoboxCategory extends Component {
         <div className="row">
           <div className="mosaic-container">
             {this.handlePrintBox(this.props)}
+            {/* <div className="mosaic-square mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-square mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-tall mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-wide mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-fat mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-medium mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+            <div className="mosaic-medium mosaic-pic-box">
+              <div
+                className="photo-container"
+                style={{
+                  backgroundImage: "url('./assets/images/bg-about-me.jpg')"
+                }}
+              />
+            </div>
+           */}
           </div>
         </div>
-        
       </React.Fragment>
     );
   }

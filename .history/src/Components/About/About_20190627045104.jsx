@@ -3,20 +3,8 @@ import "./About.css";
 
 class About extends Component {
   state = {};
-  componentDidMount(){
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
-
   componentWillUnmount(){
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+    
   }
   render() {
     return (

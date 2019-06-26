@@ -8,20 +8,15 @@ import HomeContact from './HomeContact/HomeContact';
 class Home extends Component {
     state = {  }
     componentDidMount(){
+        
+    }
+    componentWillUnmount(){
         window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        });
-      }
-    
-      componentWillUnmount(){
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        });
-      }
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }
     render() { 
         return ( 
             <React.Fragment>

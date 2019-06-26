@@ -3,21 +3,6 @@ import "./Contact.css";
 import Particles from "react-particles-js";
 class Contact extends Component {
   state = {};
-  componentDidMount(){
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
-
-  componentWillUnmount(){
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
   constructor() {
     super();
     this.state = {
