@@ -79,6 +79,8 @@
 .mosaic-container{
   width: 100%;
   float: left;
+  padding-top: 1.75rem;
+  padding-bottom: 1rem;
 }
 
 .mosaic-pic-box{
@@ -87,9 +89,10 @@
   padding: 0px;
   position: relative;
   float: left;
+  padding: 0.75rem;
 }
 .mosaic-pic-box:hover{
-  background-color: #010101;
+  /* background-color: #010101; */
 }
 .mosaic-pic-box .photo-container{
   height: 100%;
@@ -101,7 +104,25 @@
   background-position-y: center;
   cursor: pointer;
   transition: height,width, margin, 0.3s;
+  position: relative;
+  box-shadow: 0px 0px 1px #575757;
 }
+
+/* .photo-container:after{
+  content: " ";
+  position: absolute;
+  top:0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #0101012F;
+  transition: background-color 0.3s;
+  /* background-color: #010101bb; */
+/* }
+
+.mosaic-pic-box:hover .photo-container::after{
+  background-color: #01010100;
+} */
 
 .mosaic-pic-box .photo-container:hover.photo-container{
   /* // filter: blur(2px) grayscale(100%); */
@@ -158,13 +179,16 @@
 
 .img-modal{
   background: #0101012f;
-  max-height: 80vh;
-  width: 60vw;
+  max-height: 100vh;
+  width: 100vw;
+  top:0%!important;
 }
 .img-modal >.modal-content{
   background: none;
-  max-height: 80vh;
-  padding: 5px;
+  max-height: 100vh;
+  /* padding: 5px; */
+  text-align: center;
+  padding: 0px;
 }
 .img-modal > .modal-footer{
   background: none;
@@ -173,7 +197,8 @@
 .modal-close-btn{
   position: absolute;
   top: 0px;
-  left:0px;
+  left: 50%;
+  margin-left: -0.6rem;
   background: #222;
   color: #f5f5f5;
 }
@@ -182,7 +207,7 @@
   background: #f75e50;
 }
 .img-modal img{
-  max-height: 78vh;
+  max-height: 99.5vh;
   max-width: 100%;
 
 }
@@ -190,4 +215,100 @@
 .modal-overlay{
   opacity: 1 !important;
   background: #010101bb;
+}
+
+
+/*smartphone*/
+@media screen and (min-width: 576px) and (max-width: 767){
+  .mosaic-square{
+    width: 100%;
+    height: 100vw;
+    position: relative;
+    
+  }
+  .mosaic-tall{
+    width: 100%;
+    height: 200vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-wide{
+    width: 100%;
+    height: 50vw;
+    margin-top:0vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-fat{
+    width: 100%;
+    height: 160vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-medium{
+    width: 100%;
+    height: 80vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-medium-2{
+    width: 100%;
+    height: 80vw;
+    position: relative;
+    margin-top: 0vw;
+    margin-left: 0%;
+    
+  }
+}
+
+
+/*smallphone*/
+@media (max-width: 575px){
+  .mosaic-square{
+    width: 100%;
+    height: 100vw;
+    position: relative;
+    
+  }
+  .mosaic-tall{
+    width: 100%;
+    height: 200vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-wide{
+    width: 100%;
+    height: 80vw;
+    margin-top:0vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-fat{
+    width: 100%;
+    height: 160vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-medium{
+    width: 100%;
+    height: 80vw;
+    position: relative;
+    
+  }
+  
+  .mosaic-medium-2{
+    width: 100%;
+    height: 80vw;
+    position: relative;
+    margin-top: 0vw;
+    margin-left: 0%;
+    
+  }
 }

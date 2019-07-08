@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./About.css";
-
+import WOW from "wowjs";
 class About extends Component {
   state = {};
   componentDidMount(){
+    new WOW.WOW().init();
     window.scrollTo({
       top: 0,
       left: 0,
@@ -24,16 +25,16 @@ class About extends Component {
         <div className="container about-box-wrapper">
           <div className="row about-details-container">
             <div className="col l6 m6 s12">
-              <div className="row">
+              <div className="row wow fadeInUp">
                 <p className="about-us-sub-header">WHAT WE Are</p>
               </div>
-              <div className="row">
+              <div className="row wow fadeInUp">
                 <h1 className="about-us-feature-header">About Us</h1>
               </div>
-              <div className="row">
+              <div className="row wow fadeInUp">
                 <div className="header-bottom-line" />
               </div>
-              <div className="row">
+              <div className="row wow fadeInUp">
                 <p className="about-us-boyan">
                   Through our best-in-className techniques and bespoke growth
                   plans we assess digital problems and put in place strategies
@@ -50,12 +51,12 @@ class About extends Component {
                     <img
                       src="./assets/images/lens-hood.png"
                       alt="camera-icon.png"
-                      className="home-about-icon content-center"
+                      className="home-about-icon content-center wow fadeInUp"
                     />
-                    <span className="home-about-icon-counter primary-red-color">
+                    <span className="home-about-icon-counter primary-red-color wow fadeInUp">
                       132
                     </span>
-                    <span className="col s5 home-about-icon-details content-center ">
+                    <span className="col s5 home-about-icon-details content-center wow fadeInUp">
                       Pounds of Equipment
                     </span>
                   </div>
@@ -65,12 +66,12 @@ class About extends Component {
                     <img
                       src="./assets/images/camera-icon.png"
                       alt="camera-icon.png"
-                      className="home-about-icon content-center"
+                      className="home-about-icon content-center wow fadeInUp"
                     />
-                    <span className="home-about-icon-counter primary-red-color">
+                    <span className="home-about-icon-counter primary-red-color wow fadeInUp">
                       280
                     </span>
-                    <span className="col s5 home-about-icon-details content-center ">
+                    <span className="col s5 home-about-icon-details content-center wow fadeInUp">
                       Finished Photosessions
                     </span>
                   </div>
@@ -80,12 +81,12 @@ class About extends Component {
                     <img
                       src="./assets/images/photographer-umbrella.png"
                       alt="camera-icon.png"
-                      className="home-about-icon content-center"
+                      className="home-about-icon content-center wow fadeInUp"
                     />
-                    <span className="home-about-icon-counter primary-red-color">
+                    <span className="home-about-icon-counter primary-red-color wow fadeInUp">
                       195
                     </span>
-                    <span className="col s5 home-about-icon-details content-center ">
+                    <span className="col s5 home-about-icon-details content-center wow fadeInUp">
                       Studio Sessions
                     </span>
                   </div>
@@ -95,12 +96,12 @@ class About extends Component {
                     <img
                       src="./assets/images/camera-focus.png"
                       alt="camera-icon.png"
-                      className="home-about-icon content-center"
+                      className="home-about-icon content-center wow fadeInUp"
                     />
                     <span className="home-about-icon-counter primary-red-color">
                       253
                     </span>
-                    <span className="col s5 home-about-icon-details content-center ">
+                    <span className="col s5 home-about-icon-details content-center wow fadeInUp">
                       Happy Clients
                     </span>
                   </div>
@@ -110,25 +111,25 @@ class About extends Component {
 
             <div className="col s12 l6 m6 about-photo-container">
               <div
-                className="row about-photo"
+                className="row about-photo wow fadeInUp"
                 style={{
                   backgroundImage: "url('./assets/images/bg-about-me.jpg')"
                 }}
               />
             </div>
           </div>
-          <div className="row">
+          <div className="row wow fadeInUp">
             <p className="about-us-sub-header">see our works</p>
           </div>
-          <div className="row">
+          <div className="row wow fadeInUp">
             <h1 className="about-us-feature-header">Photobox</h1>
           </div>
-          <div className="row">
+          <div className="row wow fadeInUp">
             <div className="header-bottom-line" />
           </div>
 
           <div className="row photobox-cat-item">
-            <a href="#" className="col l4 m4 s12 about-photobox-grid">
+            <a href="#" className="col l4 m4 s12 about-photobox-grid wow fadeInUp">
               <div
                 className="about-photobox-img-container"
                 style={{
@@ -140,7 +141,7 @@ class About extends Component {
                 </div>
               </div>
             </a>
-            <a href="#" className="col l4 m4 s12 about-photobox-grid">
+            <a href="#" className="col l4 m4 s12 about-photobox-grid wow fadeInUp">
               <div
                 className="about-photobox-img-container"
                 style={{
@@ -152,7 +153,7 @@ class About extends Component {
                 </div>
               </div>
             </a>
-            <a href="#" className="col l4 m4 s12 about-photobox-grid">
+            <a href="#" className="col l4 m4 s12 about-photobox-grid wow fadeInUp">
               <div
                 className="about-photobox-img-container"
                 style={{

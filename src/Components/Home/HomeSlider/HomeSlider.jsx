@@ -30,7 +30,7 @@ class HomeSlider extends Component {
       <React.Fragment>
         <div className="row">
           <div className="home-slider-container-wrapper container-fluid">
-            <div className="home-slider-box">
+            <div className="home-slider-box wow fadeInUp">
               <div id="home-slider-container">
                 <div
                   className="home-slider"

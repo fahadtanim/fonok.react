@@ -3,7 +3,7 @@ import M from "materialize-css";
 import { Link } from "react-router-dom";
 import "./Photobox.css";
 import PhotoboxCategory from "./PhotoboxCategory/PhotoboxCategory";
-
+import WOW from "wowjs";
 class Photobox extends Component {
   state = {
     category: "",
@@ -620,6 +620,7 @@ class Photobox extends Component {
   }
   componentDidMount() {
     // console.log(this.sidecatnav);
+    new WOW.WOW().init();
     M.Sidenav.init(this.sidecatnav, { draggable: true });
     let elems = document.querySelectorAll(".collapsible");
     let sidenav = M.Collapsible.init(elems, {});
@@ -703,7 +704,7 @@ class Photobox extends Component {
 
     return (
       <React.Fragment>
-        <div className="fixed-btn">
+        <div className="fixed-btn wow fadeInUp">
           <a
             href="#"
             className="btn-floating btn-large red sidenav-trigger z-depth-4"

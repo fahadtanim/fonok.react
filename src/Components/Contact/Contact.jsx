@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./Contact.css";
 import Particles from "react-particles-js";
+import WOW from "wowjs";
 class Contact extends Component {
   state = {};
   componentDidMount(){
+    new WOW.WOW().init();
     window.scrollTo({
       top: 0,
       left: 0,
@@ -141,21 +143,6 @@ class Contact extends Component {
 
     console.log(this.state);
   }
-
-  componentDidMount(){
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
-  componentWillUnmount(){
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }
   render() {
     return (
       <React.Fragment>
@@ -165,10 +152,10 @@ class Contact extends Component {
             <div className="row">
               <div className="col l6 m6 s12 content-center home-contact-info-wrapper">
                 <div className="row">
-                  <h3 className="home-contact-location">Our Office</h3>
+                  <h3 className="home-contact-location wow fadeInUp">Our Office</h3>
                 </div>
                 <div className="row">
-                  <p className="home-contact-address secondary-font">
+                  <p className="home-contact-address secondary-font wow fadeInUp">
                     51/1/E Manikaagar Pukur Par,
                     <br />
                     Maniknagar, Mugda,
@@ -181,7 +168,7 @@ class Contact extends Component {
                 </div>
                 <div className="row">
                   <div className="home-contact-address-details col s11 10 m10">
-                    <p className="row">
+                    <p className="row wow fadeInUp">
                       Our studio space is located in downtown San Luis Obispo.
                       right in the heart of Central Coast, CA. Conveniently
                       surrounded by some of the world’s most talented craft
@@ -190,38 +177,38 @@ class Contact extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <h2 className="home-contact-info-title">Contact Info</h2>
+                  <h2 className="home-contact-info-title wow fadeInUp">Contact Info</h2>
                 </div>
                 <div className="row">
-                  <p className="home-contact-info-details secondary-font">
+                  <p className="home-contact-info-details secondary-font wow fadeInUp">
                     Call : +8801977515062
                   </p>
                 </div>
                 <div className="row">
-                  <p className="home-contact-info-details secondary-font">
+                  <p className="home-contact-info-details secondary-font wow fadeInUp">
                     Email : info@fonoksphotobox.com
                   </p>
                 </div>
               </div>
               <div className="col l6 m6 s12">
                 <div className="row">
-                  <h1 className="contact-form-header">Drop Us A Line</h1>
+                  <h1 className="contact-form-header wow fadeInUp">Drop Us A Line</h1>
                 </div>
                 <div className="row">
                   <form className="col s12">
                     <div className="row">
                       <div className="input-field col s12 m6 l6">
-                        <i className="material-icons prefix">account_circle</i>
+                        <i className="material-icons prefix wow fadeInUp">account_circle</i>
                         <input
                           id="icon_prefix"
                           type="text"
-                          className="validate"
+                          className="validate wow fadeInUp"
                         />
                         <label htmlFor="icon_prefix">First Name</label>
                       </div>
                       <div className="input-field col s12 m6 l6">
-                        <i className="material-icons prefix">email</i>
-                        <input id="email" type="email" className="validate" />
+                        <i className="material-icons prefix wow fadeInUp">email</i>
+                        <input id="email" type="email" className="validate wow fadeInUp" />
                         <label htmlFor="email">Email</label>
                         <span
                           className="helper-text"
@@ -230,9 +217,12 @@ class Contact extends Component {
                         />
                       </div>
                       <div className="input-field col s12">
-                      <i className="material-icons prefix">textsms</i>
-                        <textarea id="textarea1" className="materialize-textarea" />
+                      <i className="material-icons prefix wow fadeInUp">textsms</i>
+                        <textarea id="textarea1" className="materialize-textarea wow fadeInUp" />
                         <label htmlFor="textarea1">Message</label>
+                      </div>
+                      <div className = "input-field col s12">
+                        <button className="red-button-class wow fadeInUp send-contact-btn">Send</button>
                       </div>
                     </div>
                   </form>

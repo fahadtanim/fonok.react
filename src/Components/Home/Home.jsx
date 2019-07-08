@@ -5,9 +5,11 @@ import "./Home.css";
 import HomeAbout from './HomeAbout/HomeAbout';
 import HomeTestimonial from './HomeTestimonial/HomeTestimonial';
 import HomeContact from './HomeContact/HomeContact';
+import WOW from "wowjs";
 class Home extends Component {
     state = {  }
     componentDidMount(){
+      new WOW.WOW().init();
         window.scrollTo({
           top: 0,
           left: 0,

@@ -32,7 +32,7 @@ class HomeTestimonial extends Component {
         <div className="row">
           <div className="container-fluid">
             <div className="row">
-              <div className="testimonial-slider-container-wrapper container-fluid">
+              <div className="testimonial-slider-container-wrapper container-fluid wow fadeInUp">
                 <div className="testimonial-slider-box">
                   <div id="testimonial-slider-container">
                     <div className="testimonial-slider valign-wrapper">

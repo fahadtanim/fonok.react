@@ -12,3 +12,16 @@ ul > li > a{
 ul > li:hover > a{
     color: #ff5252;
 }
+
+@media screen and (min-width: 576px) and (max-width: 767){
+    .fixed-btn{
+        left: 30px;
+    }
+}
+
+/*smallphone*/
+@media (max-width: 575px){
+    .fixed-btn{
+        left: 30px;
+    }
+}

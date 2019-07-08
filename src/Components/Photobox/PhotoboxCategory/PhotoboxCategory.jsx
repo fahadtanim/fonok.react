@@ -56,7 +56,7 @@ class PhotoboxCategory extends Component {
         return props.productImages.map(img => (
           <div
             key={img.image_id}
-            className={"mosaic-" + img.size + " mosaic-pic-box modal-trigger"}
+            className={"mosaic-" + img.size + " mosaic-pic-box modal-trigger wow fadeInUp"}
             data-target={"modal"+img.image_id}
             // onClick = { () => { M.Modal.getInstance(document.getElementById("modal"+img.image_id)).open(); }}
           >
@@ -118,14 +118,14 @@ class PhotoboxCategory extends Component {
   }
 
   handlePrintSlider = props => {
-    console.log("inside render", props);
+    // console.log("inside render", props);
     if (props.sliderImages) {
-      console.log("going to output");
+      // console.log("going to output");
       if (props.sliderImages.length > 0) {
         return props.sliderImages.map(img => (
           <div
             key={img.image_id}
-            className="home-slider"
+            className="home-slider wow fadeInUp"
             style={{
               backgroundImage:
                 "url('/assets/images/portfolio/" +

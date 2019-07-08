@@ -40,7 +40,14 @@
     background-color: #f5f5f506;
 }
 
+.url-active{
+    color: #ff5252;
+    background-color: #f5f5f506;
+}
 
+.url-sidebar-active{
+    color: #ff5252;
+}
 
 
 /*smartphone*/

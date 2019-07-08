@@ -31,3 +31,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.scroll-up-btn {
+  top: auto !important;
+  left: auto !important;
+  bottom: 30px;
+  right: 30px;
+}
+
+.scroll-up-btn a{
+  background-color: #414141;
+}

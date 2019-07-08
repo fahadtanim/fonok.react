@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import "./Footer.css";
 import M from "materialize-css";
 import { Link } from "react-router-dom";
+import WOW from "wowjs";
 class Footer extends Component {
   state = {};
   componentDidMount() {
     // console.log(M);
+    new WOW.WOW().init();
     document.addEventListener("DOMContentLoaded", function() {
       var elems = document.querySelectorAll(".carousel");
       var carousel = M.Carousel.init(elems, { duration: 200,indicators:true });
@@ -19,55 +21,55 @@ class Footer extends Component {
     return (
       <React.Fragment>
         <div
-          className="row footer-wrapper"
+          className="row footer-wrapper wow fadeInUp"
           style={{ backgroundImage: "url('/assets/images/footer-bg.jpg')" }}
         >
           <div className="footer-wrapper-effect">
             <div className="row">
               {/* <!--First Boyans--> */}
-              <div className="col s12 content-center">
+              <div className="col s12 content-center wow fadeInUp">
                 <div className="row justify-center">
-                  <h1 className="footer-header-time primary-white-color">
+                  <h1 className="footer-header-time primary-white-color wow fadeInUp">
                     Now
                   </h1>
                 </div>
                 <div className="row justify-center">
-                  <p className="footer-project-availability primary-white-color">
-                    We are taking new{" "}
+                  <p className="footer-project-availability primary-white-color wow fadeInUp">
+                    We are taking new
                     <strong className="primary-red-color">projects</strong>
                   </p>
                 </div>
                 <div className="row justify-center footer-service-fapor">
-                  <p className="footer-project-fapor primary-white-color">
-                    Do you want any kind of services{" "}
-                    <strong className="primary-red-color">?</strong>
+                  <p className="footer-project-fapor primary-white-color wow fadeInUp">
+                    Do you want any kind of services
+                    <strong className="primary-red-color wow fadeInUp">?</strong>
                   </p>
                 </div>
               </div>
               {/* <!--Line Animation Boxes--> */}
               <div className="col s12 content-center">
                 <div className="row justify-center">
-                  <p className="primary-red-color footer-project-fapor-v2">
+                  <p className="primary-red-color footer-project-fapor-v2 wow fadeInUp">
                     Then
                   </p>
                 </div>
                 <div className="row justify-center">
-                  <span className="footer-line-animation-box" />
+                  <span className="footer-line-animation-box wow fadeInUp" />
                 </div>
                 <div className="row justify-center footer-contact-button">
-                  <a className="red-button-class">Contact Us</a>
+                  <a className="red-button-class wow fadeInUp">Contact Us</a>
                 </div>
               </div>
               {/* <!--OR--> */}
               <div className="col s12 content-center">
                 <div className="row justify-center">
-                  <h1 className="footer-or primary-white-color">or</h1>
+                  <h1 className="footer-or primary-white-color wow fadeInUp">or</h1>
                 </div>
               </div>
               {/* <!--Discovery--> */}
               <div className="col s12 content-center">
                 <div className="row justify-center">
-                  <h1 className="footer-fapor-discover primary-red-color">
+                  <h1 className="footer-fapor-discover primary-red-color wow fadeInUp">
                     discover more on
                   </h1>
                 </div>
@@ -75,16 +77,16 @@ class Footer extends Component {
               {/* <!--Social Icon--> */}
               <div className="col s12 content-center">
                 <div className="row justify-center footer-social-icon-wrapper">
-                  <div className="footer-social-icon-holder">
+                  <div className="footer-social-icon-holder wow fadeInUp">
                     <i className="fab fa-facebook-f footer-social-icon" />
                   </div>
-                  <div className="footer-social-icon-holder">
+                  <div className="footer-social-icon-holder wow fadeInUp">
                     <i className="fab fa-instagram footer-social-icon" />
                   </div>
-                  <div className="footer-social-icon-holder">
+                  <div className="footer-social-icon-holder wow fadeInUp">
                     <i className="fab fa-google-plus-g footer-social-icon" />
                   </div>
-                  <div className="footer-social-icon-holder">
+                  <div className="footer-social-icon-holder wow fadeInUp">
                     <i className="fab fa-twitter footer-social-icon" />
                   </div>
                 </div>
@@ -92,18 +94,18 @@ class Footer extends Component {
               {/* <!--Footer Menu--> */}
               <div className="col s12 content-center">
                 <div className="row justify-space-around footer-social-menu-wrapper">
-                  <div className="justify-space-around footer-menu">
-                    <Link to = "/home" className="footer-menu-item">Home</Link>
-                    <Link to = "/photobox" className="footer-menu-item">Photobox</Link>
-                    <Link to = "/services" className="footer-menu-item">Services</Link>
-                    <Link to = "/pricing" className="footer-menu-item">Pricing Plan</Link>
-                    <Link to = "/about" className="footer-menu-item">About Us</Link>
-                    <Link to = "/contact" className="footer-menu-item">Contact Us</Link>
+                  <div className="justify-space-around footer-menu wow fadeInUp">
+                    <Link to = "/home" className="footer-menu-item wow fadeInUp">Home</Link>
+                    <Link to = "/photobox" className="footer-menu-item wow fadeInUp">Photobox</Link>
+                    <Link to = "/services" className="footer-menu-item wow fadeInUp">Services</Link>
+                    <Link to = "/pricing" className="footer-menu-item wow fadeInUp">Pricing Plan</Link>
+                    <Link to = "/about" className="footer-menu-item wow fadeInUp">About Us</Link>
+                    <Link to = "/contact" className="footer-menu-item wow fadeInUp">Contact Us</Link>
                   </div>
                 </div>
               </div>
               <div className="col s12">
-                <div className="carousel">
+                <div className="carousel wow fadeInUp">
                   <div className="carousel-item">
                     <img
                       src="/assets/images/footerCarousel/DSC_4749.jpg"
@@ -139,13 +141,13 @@ class Footer extends Component {
               <div className="col s12">
                 <div className="row footer-bottom-container-row footer-bottom-container">
                   <div className="col s6 footer-bottom-copyright primary-white-color">
-                    <p className="footer-copyright-text">
+                    <p className="footer-copyright-text wow fadeInUp">
                       &copy; all right reserved by fonok's photobox
                     </p>
                   </div>
                   <div className="col s6 footer-bottom-others right-align">
                     <button
-                      className="footer-bottom-link btn btn-flat modal-trigger"
+                      className="footer-bottom-link btn btn-flat modal-trigger wow fadeInUp"
                       data-target="footer-main-modal"
                     >
                       Terms &amp; Policies

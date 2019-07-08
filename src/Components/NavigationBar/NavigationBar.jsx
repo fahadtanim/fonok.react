@@ -1,71 +1,77 @@
 import React, { Component } from "react";
 import "./NavigationBar.css";
 import M from "materialize-css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 class NavigationBar extends Component {
   state = {};
   componentDidMount() {
     // console.log(this.sidenav);
     M.Sidenav.init(this.sidenav, { draggable: true });
   }
+  closeSidenav = () => {
+    // this.sidecatnav.close();
+    let instance = M.Sidenav.getInstance(this.sidenav);
+    // console.log(instance);
+    instance.close();
+  };
   render() {
     return (
       <React.Fragment>
         <div className="navbar-fixed z-depth-4">
           <nav id="main-nav">
             <div className="nav-wrapper">
-              <Link
+              <NavLink activeClassName="url-active"
                 className="btn waves-effect"
                 to="/home"
                 className="brand-logo"
               >
                 Fonok's
-              </Link>
+              </NavLink>
               <a href="#" data-target="mobile-demo" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
               </a>
               <ul className="right hide-on-med-and-down nav-items">
                 <li>
-                  <Link to="/home">Home</Link>
+                  <NavLink activeClassName="url-active" to="/home">Home</NavLink>
                 </li>
                 <li>
-                  <Link to="/photobox">
+                  <NavLink activeClassName="url-active" to="/photobox">
                     Photobox
-                  </Link>
+                  </NavLink>
                   {/* <ul className="z-depth-4 sub-menu">
                     <li>
-                      <Link to="/photobox/fashion/view">Fashion Photobox</Link>
+                      <NavLink activeClassName="url-active" to="/photobox/fashion/view">Fashion Photobox</NavLink>
                     </li>
                     <li>
-                      <Link to="/photobox/event/view">Event Photobox</Link>
+                      <NavLink activeClassName="url-active" to="/photobox/event/view">Event Photobox</NavLink>
                     </li>
                     <li>
-                      <Link to="/photobox/product/view">
+                      <NavLink activeClassName="url-active" to="/photobox/product/view">
                         Product Photobox
                         <i className="material-icons sub-submenu-icon">
                           chevron_right
                         </i>
-                      </Link>
+                      </NavLink>
 
                       <ul className = "sub-sub-menu">
                         <li>
-                          <Link to = "#">Test</Link>
+                          <NavLink activeClassName="url-active" to = "#">Test</NavLink>
                         </li>
                       </ul>
                     </li>
                   </ul> */}
                 </li>
                 <li>
-                  <Link to="/service">Service</Link>
+                  <NavLink activeClassName="url-active" to="/service">Service</NavLink>
                 </li>
                 <li>
-                  <Link to="/pricing">Pricing Plan</Link>
+                  <NavLink activeClassName="url-active" to="/pricing">Pricing Plan</NavLink>
                 </li>
                 <li>
-                  <Link to="/about">About Us</Link>
+                  <NavLink activeClassName="url-active" to="/about">About Us</NavLink>
                 </li>
                 <li>
-                  <Link to="/contact">Contact Us</Link>
+                  <NavLink activeClassName="url-active" to="/contact">Contact Us</NavLink>
                 </li>
               </ul>
             </div>
@@ -80,34 +86,34 @@ class NavigationBar extends Component {
           }}
         >
           <li>
-            <Link className="" to="/home">
+            <NavLink activeClassName="url-sidebar-active" className="" to="/home" onClick={this.closeSidenav}>
               Home
-            </Link>
+            </NavLink >
           </li>
           <li>
-            <Link className="" to="/photobox">
+            <NavLink activeClassName="url-sidebar-active" className="" to="/photobox" onClick={this.closeSidenav}>
               Photobox
-            </Link>
+            </NavLink >
           </li>
           <li>
-            <Link className="" to="/service">
+            <NavLink activeClassName="url-sidebar-active" className="" to="/service" onClick={this.closeSidenav}>
               Service
-            </Link>
+            </NavLink >
           </li>
           <li>
-            <Link className="" to="/pricing">
+            <NavLink activeClassName="url-sidebar-active" className="" to="/pricing" onClick={this.closeSidenav}>
               Pricing Plan
-            </Link>
+            </NavLink >
           </li>
           <li>
-            <Link className="" to="/about">
+            <NavLink activeClassName="url-sidebar-active" className="" to="/about" onClick={this.closeSidenav}>
               About Us
-            </Link>
+            </NavLink >
           </li>
           <li>
-            <Link className="" to="/contact">
+            <NavLink activeClassName="url-sidebar-active" className="" to="/contact" onClick={this.closeSidenav}>
               Contact Us
-            </Link>
+            </NavLink >
           </li>
         </ul>
       </React.Fragment>
