@@ -123,7 +123,7 @@ export default class SliderService {
     this.animate();
   }
   /*############# Calling to go to next slide  ################   */
-  increment() {
+  increment(){
     // console.log('increment() called');
     const len = document.getElementsByClassName(this.dotClassName).length;
     if (this.x < len) {
